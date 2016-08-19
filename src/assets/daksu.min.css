@@ -1,0 +1,14 @@
+---
+group-css-media-queries: true
+cssmin: true
+---
+/*! project.css v1.0.0 | SE7ENSKY frontend studio <hello@se7ensky.com> */
+
+/*= require assets/styles/normalize */
+/*= require assets/styles/typo */
+/*= require assets/styles/helpers */
+/*= require assets/styles/general */
+/*= require assets/styles/buttons */
+/*= require assets/styles/forms */
+
+/*= require_tree blocks */

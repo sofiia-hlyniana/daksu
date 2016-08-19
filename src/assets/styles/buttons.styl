@@ -1,0 +1,79 @@
+animDuration = .15s
+animFunction = cubic-bezier(0, 0, 0.2, 1)
+
+.btn
+	display inline-block
+	vertical-align middle
+	padding 20px 40px
+	border 2px solid rgba(0, 0, 0, .92)
+	color #000000
+	font-family mainFont
+	line-height 1
+	text-align center
+	font-weight bold
+	cursor pointer
+	outline none
+	user-select none
+	text-decoration none
+	overflow hidden
+	transition background animDuration animFunction, color animDuration animFunction, box-shadow animDuration animFunction, border-color animDuration animFunction
+	a &
+		text-decoration none
+	&:hover
+	&:active
+		background #ffffff
+		color blueColor
+	&:active
+		box-shadow 0 5px 5px rgba(0, 0, 0, .3) inset
+	&.disabled
+	&[disabled]
+		cursor not-allowed
+		opacity .5
+		pointer-events none
+	&-block
+		display block
+		width 100%
+	&-blue
+		background blueColor
+		border-color blueColor
+		color #ffffff
+	&-white
+		position relative
+		background transparent
+		border-color rgba(255, 255, 255, .52)
+		color #ffffff
+	&-bordered-white
+		border 2px solid #ffffff
+		color #ffffff
+		&:hover
+		&:active
+			background blueColor
+			color #ffffff
+	&-bordered-grey
+		position relative
+		border 2px solid rgba(0, 0, 0, .48)
+		color #000000
+		&:hover
+		&:active
+			color #ffffff
+			background none
+			border-color #ffffff
+			&:before
+				transform translate3d(0, 100%, 0)
+			&:after
+				transition-delay 0.175s
+				transform translate3d(0, 100%, 0)
+		&:before
+		&:after
+			content ""
+			position absolute
+			bottom 100%
+			left 0
+			z-index -1
+			height 100%
+			width 100%
+			transition transform .3s cubic-bezier(0.75, 0, 0.125, 1)
+		&:before
+			background blueColor
+		&:after
+			background blueVioletColor

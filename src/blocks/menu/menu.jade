@@ -1,0 +1,5 @@
+if menuList
+	+e("ul").list
+		each item in menuList
+			+e("li").item
+				+e("a").link.bordered-hover(href=item.url)= item.title

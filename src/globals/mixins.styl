@@ -1,0 +1,36 @@
+fit-image()
+	text-align center
+	letter-spacing 0
+	font-size 0
+	&:after
+		content ""
+		display inline-block
+		height 100%
+		width 0
+		vertical-align middle
+	>img
+		letter-spacing normal
+		font-size 12px
+		border 0 none
+		margin 0 auto
+		max-width 100%
+		max-height 100%
+		display inline-block
+		vertical-align middle
+
+reset-ul()
+	&, & li
+		margin 0
+		padding 0
+		list-style none
+
+iconParams()
+	font-family 'icons'
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	line-height 1
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale

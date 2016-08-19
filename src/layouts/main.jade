@@ -1,0 +1,17 @@
+extends root
+
+block root
+	
+	main.main
+		block main
+			!= content
+
+block fonts
+	link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" type='text/css')
+
+block styles
+	link(rel="stylesheet", href=asset("daksu.min.css"))
+
+block scripts
+	script(src=asset("jquery-1.11.0.min.js") defer)
+	script(src=asset("daksu.min.js") defer)
