@@ -1,6 +1,11 @@
 extends root
 
 block root
+
+	+b("header").header: +i({
+		title: file.header.title,
+		headerButtons: file.header.buttons
+	})
 	
 	main.main
 		block main

@@ -1,0 +1,18 @@
+.container
+	+e.inner
+		+b.menu-toggle
+		+e("a").logo(href="/")
+			+e("span").icon.icon(data-icon="s")
+		+e("h3").title!= title
+		+b.buttons
+			each item in headerButtons
+				if item.icon
+					+e("a").link(href=item.url)
+						+e("span").icon.icon(data-icon=item.icon)
+				if item.text
+					+e("a").link(href=item.url)= item.text
+		+b.user-panel
+			+e("h5").company Acme Industries
+			+e("h6").name David Ramirez
+			+e.avatar
+				+e("a").link(href="/") DR

@@ -1,0 +1,9 @@
+<svg width="32px" height="32px" viewbox="1374 14 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="path-1" x="1374" y="14" width="32" height="32" rx="4"></rect>
+    <mask id="mask-2" maskcontentunits="userSpaceOnUse" maskunits="objectBoundingBox" x="0" y="0" width="32" height="32" fill="white">
+      <use xlink:href="#path-1"></use>
+    </mask>
+  </defs>
+  <use id="avatar" stroke="#A2A5AF" mask="url(#mask-2)" stroke-width="4" stroke-linejoin="round" stroke-dasharray="2,3" fill="#F9FAFC" fill-rule="evenodd" xlink:href="#path-1"></use>
+</svg>

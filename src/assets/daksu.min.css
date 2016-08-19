@@ -10,5 +10,6 @@ cssmin: true
 /*= require assets/styles/general */
 /*= require assets/styles/buttons */
 /*= require assets/styles/forms */
+/*= require assets/styles/icons */
 
 /*= require_tree blocks */
