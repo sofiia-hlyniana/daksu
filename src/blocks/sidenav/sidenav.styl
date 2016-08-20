@@ -5,10 +5,52 @@
 	z-index 1
 	width 0
 	height 100%
-	padding-top 60px
 	overflow-x hidden
 	background-color #fff
 	transition 0.5s
+	&__container
+		padding 45px 32px
 
+	.stacks
+		&__title
+			margin 0 0 17px
+		&__list
+			margin 0 0 28px
+			padding 0
+			list-style-type none
+		&__item
+			margin 0 0 14px
+		&__link
+		&__icon
+			display inline-block
+			vertical-align bottom
+		&__link
+			margin-left 25px
+			color grayColor
+			font-size 14px
+			font-weight 600
+			text-decoration none
+		&__icon
+			position relative
+			color grayColor
+			&:before
+				position absolute
+				bottom 0
+		&__add-button
+			position relative
+			width 100%
+			padding 7px
+			background #ffffff
+			border 2px solid #E8E8E8
+			color #A2A5AF
+			font-size 14px
+			font-weight 600
+			&:before
+				content ""
+		&__button-icon
+			position absolute
+			top 9px
+			left 32px
+			color #A2A5AF
 .main
 	transition margin-left .5s

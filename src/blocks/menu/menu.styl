@@ -1,0 +1,53 @@
+.menu
+	&__list
+		margin 0 0 70px
+		padding 0
+		list-style-type none
+	&__item
+		position relative
+		padding 7px 0
+		margin 0 0 2px
+		&:after
+			content ""
+			display none
+			position absolute
+			left -32px
+			top 0
+			bottom 0
+			width 5px
+
+		&.icon_blue
+			&:after
+				background blueColor
+		&.icon_coral
+			&:after
+				background coralColor
+		&.icon_green
+			&:after
+				background neonGreenColor
+		&.icon_pink
+			&:after
+				background pinkVioletColor
+
+		&.selected
+			&:after
+				display block
+	&__link
+		padding-left 16px
+		color grayColor
+		font-size 16px
+		font-weight 600
+		text-decoration none
+		&:hover
+		&:active
+		.active &
+			color siteColor
+	&__icon
+		.icon_blue &
+			color blueColor
+		.icon_coral &
+			color coralColor
+		.icon_green &
+			color neonGreenColor
+		.icon_pink &
+			color pinkVioletColor

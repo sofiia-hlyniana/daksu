@@ -2,12 +2,16 @@
   url: "/"
   icon: "r"
   active: true
+  color: "icon_blue"
 - title: Vendors
   url: "/"
   icon: "q"
+  color: "icon_green"
 - title: Inventory
   url: "/"
   icon: "n"
+  color: "icon_coral"
 - title: Channels
   url: "/"
   icon: "g"
+  color: "icon_pink"

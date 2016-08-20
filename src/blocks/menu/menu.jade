@@ -1,9 +1,11 @@
 if menuList
 	+e("ul").list
 		each item in menuList
-			- classes = ""
+			- classes = []
 				if item.active
-					- classes = "selected"
+					- classes.push("selected")
+				if item.color
+					- classes.push(item.color)
 			+e("li").item(class=classes)
 				+e("span").icon.icon(data-icon=item.icon)
 				+e("a").link.bordered-hover(href=item.url)= item.title
