@@ -1,18 +1,23 @@
 .container
 	+e.inner
-		+b.menu-toggle
+		+e.menu-toggle
+			+b.menu-toggle: +i
+
 		+e("a").logo(href="/")
-			+e("span").icon.icon(data-icon="s")
+			+e("img").logo-icon(src="assets/i/logo.svg" alt="" width="80" height="16")
+
 		+e("h3").title!= title
-		+b.buttons
+
+		+e.user
+			+e("a").user-avatar(href="/")
+				+e("span").user-alt DR
+			+e.user-text
+				+e("h5").user-company Acme Industries
+				+e("h6").user-name David Ramirez
+		+e.buttons
 			each item in headerButtons
 				if item.icon
-					+e("a").link(href=item.url)
-						+e("span").icon.icon(data-icon=item.icon)
+					+e("a").buttons-link(href=item.url)
+						+e("span").buttons-icon.icon(data-icon=item.icon)
 				if item.text
-					+e("a").link(href=item.url)= item.text
-		+b.user-panel
-			+e("h5").company Acme Industries
-			+e("h6").name David Ramirez
-			+e.avatar
-				+e("a").link(href="/") DR
+					+e("a").buttons-link._text(href=item.url)= item.text
