@@ -1,0 +1,15 @@
++e.container
+	+e.menu
+		+b.menu: +i({ menuList: mainMenu })
+
+	if stacks
+		+b.stacks-list
+			+e("h6").title= stacks.title
+			+e("ul").list
+				each item in stacks.list
+					+e("li").item
+						+e("span").icon.icon(data-icon=item.icon)
+						+e("a").link(href=item.url)= item.title
+			+e.add-button
+				+e("span").icon.icon(data-icon="k")
+				+e("button").button New Stack

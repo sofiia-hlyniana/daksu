@@ -1,6 +1,13 @@
-- title: Products
-  url: "#products"
-- title: Invite Friends
-  url: "#invite"
-- title: About Us
-  url: "#about"
+- title: Product Lists
+  url: "/"
+  icon: "r"
+  active: true
+- title: Vendors
+  url: "/"
+  icon: "q"
+- title: Inventory
+  url: "/"
+  icon: "n"
+- title: Channels
+  url: "/"
+  icon: "g"

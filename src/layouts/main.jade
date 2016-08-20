@@ -6,6 +6,10 @@ block root
 		title: file.header.title,
 		headerButtons: file.header.buttons
 	})
+
+	+b("nav").sidenav: +i({
+		stacks: file.sidenav.stacks
+	})
 	
 	main.main
 		block main
