@@ -1,0 +1,15 @@
+.container
+	if title
+		+e("h4").title!= title
+	if list
+		+e("ul").list
+			each item in list
+				+e("li").item
+					+e("a").link(href=item.url)
+						if item.new
+							+e("span").product-badge New
+						if item.image
+							+e("img").product-image(src=item.image alt="" width="57" height="75")
+						if item.title
+							+e("span").product-title!= item.title
+						+e("span").product-arrow.icon(data-icon="j")

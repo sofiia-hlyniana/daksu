@@ -1,4 +1,7 @@
 extends main
 
 block main
+
 	+b("section").search-panel: +i({ buttonsList: file.searchPanel.list })
+	+b("section").category: +i({ title: file.categoryOne.title, list: file.categoryOne.list })
+	+b("section").category: +i({ title: file.categoryTwo.title, list: file.categoryTwo.list })
