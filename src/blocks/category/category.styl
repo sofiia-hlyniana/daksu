@@ -1,0 +1,78 @@
+.category
+	&__header
+		display flex
+		align-items middle
+		margin 0 0 20px
+	&__line
+		flex 1 0 auto
+		align-self center
+		height 1px
+		background #E8E8E8
+	&__title
+		margin 0 18px 0 0
+		flex 0 1 auto
+	&__list
+		margin 0 -15px 12px
+		padding 0
+		list-style-type none
+	&__item
+		display inline-block
+		vertical-align top
+		width 166px
+		height 184px
+		margin 0 15px 41px
+		border 1px solid #E8E8E8
+	&__link
+		position relative
+		display block
+		height 100%
+		padding 26px 14px 15px
+		text-align center
+		color grayColor
+		text-decoration none
+		&:hover
+		&:active
+			color siteColor
+			.path
+				fill blueColor
+			.category__product-arrow
+				display block
+				opacity 1
+	&__product-image
+		display block
+		margin 0 0 10px
+		svg
+			height 73px
+			width 73px
+	&__title-wrapper
+		display table
+		width 100%
+		height 55px
+	&__product-title
+		display table-cell
+		text-align center
+		vertical-align middle
+		margin 0
+	&__product-arrow
+		position absolute
+		right 8px
+		top 8px
+		display none
+		width 18px
+		height 18px
+		border 1px solid #E8E8E8
+		border-radius 4px
+		color grayColor
+		opacity 0
+		cursor pointer
+		transition opacity .15s ease-out
+	&__product-badge
+		position absolute
+		top 3px
+		left 3px
+		padding 2px 5px
+		background neonGreenColor
+		color #ffffff
+		font-weight 600
+		font-size 10px
+		border-radius 6px

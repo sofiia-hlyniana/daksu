@@ -18,7 +18,7 @@ buttonHeight = 52px
 		height 100%
 	&__icon
 		position absolute
-		top 8px
+		top 10px
 		left 11px
 		color grayColor
 		width 16px
@@ -42,10 +42,11 @@ buttonHeight = 52px
 		text-align center
 		background-color inactiveColor
 		cursor pointer
-		transition background-color .15s ease-in-out, color .15s ease-in-out
+		transition background-color .15s ease-in-out, color .15s ease-in-out, border-color .15s ease-in-out
 		&:hover
 		&.active
 			background-color violetColor
+			border-color violetColor
 			color #ffffff
 		&:first-child
 			border-left none
