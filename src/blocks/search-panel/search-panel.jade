@@ -4,10 +4,12 @@
 			+e("span").icon.icon(data-icon="u")
 			+e("input").input.form-control(type="search" name="product-search")
 	if buttonsList
-		+b("ul").buttons-list
+		+e("ul").buttons-list
 			each item in buttonsList
 				- classes = ""
 					if item.active
 						- classes = "active"
-					+e("li").item(class=classes)= item.title
-	+e("button").add-button.icon(data-icon="y")
+					+e("li").button(class=classes)= item.title
+	+e.add-button
+		+e("button").btn
+			+e("span").add-icon.icon(data-icon="y")
