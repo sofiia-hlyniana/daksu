@@ -1,22 +1,28 @@
 $ ->
 	$body = $('body')
-	showNav = (navSelector, elementToMove, navWidth, bodyClass) ->
+	$menuToggle = $('.menu-toggle__icon')
+
+	showNav = (navSelector, elementToMove, elementToShrink, navWidth, bodyClass) ->
 		$(navSelector).width navWidth
 		$(elementToMove).css 'margin-left', navWidth
+		newWidth = $(elementToShrink).width() - navWidth
+		$(elementToShrink).width newWidth
 		$body.addClass bodyClass
 
-	hideNav = (navSelector, elementToMove, bodyClass) ->
+	hideNav = (navSelector, elementToMoveBack, elementToGrow, navWidth, bodyClass) ->
 		$(navSelector).width 0
-		$(elementToMove).css 'margin-left', 0
+		$(elementToMoveBack).css 'margin-left', 0
+		$(elementToGrow).removeAttr 'style'
 		$body.removeClass bodyClass
 
-	$('.menu-toggle__icon').on 'click', (ev) ->
+	$menuToggle.on 'click', (ev) ->
 		ev.preventDefault()
 		ev.stopPropagation()
-		showNav '.sidenav', '.main', 245, 'menu-open'
+		if $body.hasClass 'menu-open'
+			hideNav '.sidenav', '.main', '.main .container', 245, 'menu-open'
+		else
+			showNav '.sidenav', '.main', '.main .container', 245, 'menu-open'
 
-	$('body').on 'click', (ev) ->
-#		console.log ev.target == $('.sidenav')
-		return if ev.target == $('.sidenav') or ev.target == $('.sidenav').children()
-		if $('body').hasClass 'menu-open'
-			hideNav '.sidenav', '.main', 'menu-open'
+	$(window).on 'resize', ->
+		if $body.hasClass 'menu-open'
+			hideNav '.sidenav', '.main', '.main .container', 245, 'menu-open'

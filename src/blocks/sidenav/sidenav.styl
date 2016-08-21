@@ -21,21 +21,20 @@
 		&__item
 			margin 0 0 14px
 		&__link
-		&__icon
 			display inline-block
 			vertical-align bottom
-		&__link
-			margin-left 25px
 			color grayColor
 			font-size 14px
 			font-weight 600
 			text-decoration none
-		&__icon
-			position relative
-			color grayColor
-			&:before
-				position absolute
-				bottom 0
+			&-icon
+				position relative
+				display inline-block
+				margin-right 25px
+				color grayColor
+				&:before
+					position absolute
+					bottom 0
 		&__add-button
 			position relative
 			width 100%
@@ -45,6 +44,7 @@
 			color #A2A5AF
 			font-size 14px
 			font-weight 600
+			cursor pointer
 			&:before
 				content ""
 		&__button-icon

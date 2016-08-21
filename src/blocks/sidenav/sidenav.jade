@@ -8,8 +8,9 @@
 			+e("ul").list
 				each item in stacks.list
 					+e("li").item
-						+e("span").icon.icon(data-icon="x")
-						+e("a").link(href=item.url)= item.title
+						+e("a").link(href=item.url)
+							+e("span").link-icon.icon(data-icon="x")
+							+e("span").link-text= item.title
 
 			+e("button").add-button New Stack
 				+e("span").button-icon.icon(data-icon="k")

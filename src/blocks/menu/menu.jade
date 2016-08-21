@@ -7,5 +7,6 @@ if menuList
 				if item.color
 					- classes.push(item.color)
 			+e("li").item(class=classes)
-				+e("span").icon.icon(data-icon=item.icon)
-				+e("a").link.bordered-hover(href=item.url)= item.title
+				+e("a").link(href=item.url)
+					+e("span").link-icon.icon(data-icon=item.icon)
+					+e("span").link-text= item.title
