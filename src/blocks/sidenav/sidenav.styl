@@ -1,13 +1,15 @@
 .sidenav
 	position fixed
-	top 61px
+	z-index 100
+	top 0
 	left 0
-	z-index 1
-	width 0
+	display none
+	width 245px
 	height 100%
+	padding-top 61px
 	overflow-x hidden
-	background-color #fff
-	transition 0.5s
+	opacity 0
+	background-color #ffffff
 	&__container
 		padding 45px 32px
 
@@ -52,5 +54,3 @@
 			top 9px
 			left 32px
 			color #A2A5AF
-.main
-	transition margin-left .5s

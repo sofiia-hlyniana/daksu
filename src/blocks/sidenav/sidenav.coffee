@@ -3,15 +3,17 @@ $ ->
 	$menuToggle = $('.menu-toggle__icon')
 
 	showNav = (navSelector, elementToMove, elementToShrink, navWidth, bodyClass) ->
-		$(navSelector).width navWidth
-		$(elementToMove).css 'margin-left', navWidth
 		newWidth = $(elementToShrink).width() - navWidth
-		$(elementToShrink).width newWidth
+		$(elementToShrink).animate { width: newWidth }, 500
+		$(elementToMove).animate { marginLeft: navWidth }, 500
+		$(navSelector).show 250, ->
+			$(navSelector).animate {opacity: 1}, 250
 		$body.addClass bodyClass
 
 	hideNav = (navSelector, elementToMoveBack, elementToGrow, navWidth, bodyClass) ->
-		$(navSelector).width 0
-		$(elementToMoveBack).css 'margin-left', 0
+		$(navSelector).animate {opacity: 0}, 250, ->
+			$(navSelector).hide 250
+		$(elementToMoveBack).animate { marginLeft: 0 }, 500
 		$(elementToGrow).removeAttr 'style'
 		$body.removeClass bodyClass
 
