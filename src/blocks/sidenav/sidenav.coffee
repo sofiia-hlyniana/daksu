@@ -4,7 +4,7 @@ $ ->
 
 	showNav = (navSelector, elementToMove, elementToShrink, navWidth, bodyClass) ->
 		newWidth = $(elementToShrink).width() - navWidth
-		$(elementToShrink).animate { width: newWidth }, 500
+		$(elementToShrink).animate { width: '100%' }, 500
 		$(elementToMove).animate { marginLeft: navWidth }, 500
 		$(navSelector).show 250, ->
 			$(navSelector).animate {opacity: 1}, 250
