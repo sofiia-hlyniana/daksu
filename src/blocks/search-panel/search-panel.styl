@@ -2,24 +2,37 @@ buttonHeight = 52px
 
 .search-panel
 	padding 30px 0 45px
+	@media phone
+		padding 0 0 30px
 	&__form
 	&__buttons-list
 	&__add-button
 		float left
 		width 33.33333%
+		@media phone
+			float none
+			width 100%
 	&__form
 		margin 12px 0 0
 		@media tablet
 			width 40%
-	&__input-wrapper
-		position relative
-		width 48.5%
-		height 37px
-		@media tablet
-			width 88.5%
+		@media phone
+			position absolute
+			left 0
+			right 0
+			margin 0
 	&__input
 		width 100%
 		height 100%
+		&-wrapper
+			position relative
+			width 48.5%
+			height 37px
+			@media tablet
+				width 88.5%
+			@media phone
+				width 100%
+				height 40px
 	&__icon
 		position absolute
 		top 10px
@@ -36,6 +49,9 @@ buttonHeight = 52px
 		letter-spacing 0
 		@media tablet
 			width 40%
+		@media phone
+			width 100%
+			margin 66px 0 0
 	&__button
 		display inline-block
 		vertical-align middle
@@ -76,6 +92,8 @@ buttonHeight = 52px
 			@media tablet
 				float right
 				width 20%
+			@media phone
+				display none
 		&-icon
 			display inline-block
 			vertical-align middle

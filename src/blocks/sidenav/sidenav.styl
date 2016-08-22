@@ -10,6 +10,8 @@
 	overflow-x hidden
 	opacity 0
 	background-color #ffffff
+	@media phone
+		width 100%
 	&__container
 		padding 45px 32px
 
@@ -49,6 +51,10 @@
 			cursor pointer
 			&:before
 				content ""
+			@media phone
+				width 50%
+			@media (max-width: 320px)
+				width 100%
 		&__button-icon
 			position absolute
 			top 9px
