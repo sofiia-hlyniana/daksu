@@ -1,8 +1,9 @@
 .container
-	if title
-		+e.header
+	+e.dropdown.dropdown
+		+e("a").header.dropdown-toggle(data-toggle="dropdown")
 			+e("h4").filter-title!= title
 			+e("span").filter-arrow.icon(data-icon="j")
+		+b("ul").dropdown-list.dropdown-menu: +i({ dropDown: dropDown })
 
 	if list
 		+e("ul").list
