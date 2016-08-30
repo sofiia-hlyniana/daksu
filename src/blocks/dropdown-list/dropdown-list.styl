@@ -1,5 +1,26 @@
 .dropdown-list
+	margin 0
+	padding 0
+	columns 4
+	column-gap 22px
+	@media phone
+		columns 3
+	@media (max-width: 500px)
+		columns 2
+	@media (max-width: 500px)
+		columns 1
+	&__input-wrapper
+		position relative
+		display inline-block
 	&__item
 		list-style-type none
+		margin 0 0 9px
+	&__label
 		font-size 14px
 		font-weight 400
+	&__icon
+		position absolute
+		top 0
+		left 0
+		&:before
+			font-size 11px

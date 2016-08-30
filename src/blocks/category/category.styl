@@ -13,6 +13,7 @@
 			margin 0 9px 0 0
 			font-size 14px
 			font-weight 400
+			color siteColor
 		&-arrow
 			display inline-block
 			vertical-align middle
@@ -37,7 +38,6 @@
 		border 1px solid #E8E8E8
 		border-radius 4px
 		@media phone
-			height 182px
 			margin 0 15px 13px
 	&__link
 		position relative
@@ -50,11 +50,14 @@
 		&:hover
 		&:active
 			color siteColor
+			text-decoration none
+			outline 0
 			.path
 				fill blueColor
-			.category__product-arrow
-				display block
-				opacity 1
+			.category__product
+				&-arrow
+					display block
+					opacity 1
 	&__product
 		&-image
 			display block
@@ -62,6 +65,14 @@
 			svg
 				height 73px
 				width 73px
+			&_list
+				margin 0 -15px 10px
+				&-item
+					display inline-flex
+					justify-content space-around
+					width 42px
+					height @width
+					margin 0 7px 5px
 		&-title
 			display table-cell
 			margin 0
@@ -94,3 +105,48 @@
 		display table
 		width 100%
 		height 60px
+	&__dropdown
+		&-menu
+			position relative
+			width 100%
+			padding 15px 25px 52px
+			margin -20px 0 0
+			border 1px solid #E8E8E8
+			box-shadow 0 4px 12px rgba(186, 191, 199, .3)
+			border-radius 0
+		&-close
+			float right
+			width 16px
+			height 16px
+			margin-top 25px
+			&_icon
+				width 16px
+				height 16px
+	&__input
+		width 95%
+		height auto
+		padding 13px 53px
+		border 0
+		border-radius 0
+		color #A2A5AF
+		font-size 16px
+		box-shadow none !important
+		&:focus
+			box-shadow none
+			outline 0
+			border 0
+		&-wrapper
+			position relative
+		&-icon
+			position absolute
+			top 50%
+			left 0
+			margin-top -12px
+			font-size 25px
+			color grayColor
+	&__search-field
+		width 97%
+		padding 10px 0 17px
+	.dropdown-list
+		padding-top 45px
+		border-top 1px solid #e8e8e8

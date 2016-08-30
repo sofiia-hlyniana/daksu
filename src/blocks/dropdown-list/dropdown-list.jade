@@ -1,4 +1,6 @@
 each item in dropDown
 	+e("li").item
-		+e("label")= item.label
-		+e("input").input(type="checkbox")
+		+e.input-wrapper
+			+e("input").input(type="checkbox" name=item.name id=item.id)
+			+e("label").label(for="#{item.id}")= item.label
+			+e("span").icon.icon(data-icon="i")

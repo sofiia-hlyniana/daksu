@@ -3,7 +3,7 @@ $ ->
 	$menuToggle = $('.menu-toggle__icon')
 
 	showNav = (navSelector, elementToMove, elementToShrink, navWidth, bodyClass) ->
-		newWidth = $(elementToShrink).width() - navWidth
+		navWidth = if window.innerWidth > 767 then navWidth else '100%'
 		$(elementToShrink).animate { width: '100%' }, 500
 		$(elementToMove).animate { marginLeft: navWidth }, 500
 		$(navSelector).show 250, ->
