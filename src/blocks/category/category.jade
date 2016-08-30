@@ -1,14 +1,14 @@
 .container
 	if title
 		+e.header
-			+e("h4").title!= title
-			+e.line
+			+e("h4").filter!= title
 
 	if list
 		+e("ul").list
 			each item in list
 				+e("li").item
 					+e("a").link(href=item.url)
+						+e("h6").title= item.category
 						+e("span").product-arrow.icon(data-icon="j")
 						if item.new
 							+e("span").product-badge New
