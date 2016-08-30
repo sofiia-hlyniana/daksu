@@ -1,7 +1,8 @@
 .container
 	if title
 		+e.header
-			+e("h4").filter!= title
+			+e("h4").filter-title!= title
+			+e("span").filter-arrow.icon(data-icon="j")
 
 	if list
 		+e("ul").list
