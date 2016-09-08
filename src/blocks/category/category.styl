@@ -2,10 +2,14 @@
 	&__header
 		display inline-block
 		margin 0 0 25px
-		padding 4px 7px
+		padding 4px 10px
+		background #ffffff
 		border 1px solid #E8E8E8
 		border-radius 4px
 		cursor pointer
+		transition background .2s ease-out
+		.open &
+			background #EEF0F4
 	&__filter
 		&-title
 			display inline-block
@@ -19,6 +23,9 @@
 			vertical-align middle
 			margin-top 5px
 			color siteColor
+			transition transform .2s ease-out
+			.open &
+				transform rotate(180deg) translateY(5px)
 	&__title
 		position absolute
 		top 6px
@@ -26,6 +33,8 @@
 		font-weight 600
 		font-size 12px
 	&__list
+		position relative
+		z-index 1
 		margin 10px -15px 12px
 		padding 0
 		list-style-type none
@@ -44,6 +53,7 @@
 		display block
 		height 100%
 		padding 44px 20px 15px
+		background #ffffff
 		text-align center
 		color grayColor
 		text-decoration none
@@ -52,6 +62,7 @@
 			color siteColor
 			text-decoration none
 			outline 0
+			box-shadow 0 0 12px 0 rgba(105, 116, 136, .06)
 			.path
 				fill blueColor
 			.category__product
@@ -106,14 +117,23 @@
 		width 100%
 		height 60px
 	&__dropdown
+		position relative
+		z-index 2
 		&-menu
-			position relative
+			display none
+			position absolute
 			width 100%
 			padding 15px 25px 52px
 			margin -20px 0 0
 			border 1px solid #E8E8E8
 			box-shadow 0 4px 12px rgba(186, 191, 199, .3)
 			border-radius 0
+			opacity 0
+			background #ffffff
+			transition opacity .4s ease-out
+			.open &
+				display block
+				opacity 1
 		&-close
 			float right
 			width 16px

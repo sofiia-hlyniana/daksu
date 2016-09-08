@@ -1,8 +1,7 @@
 $ ->
-	$('.dropdown-toggle').dropdown()
-
-	$('.dropdown__toggle').on 'click', ->
-		$parent = $(@).parents('.dropdown')
+	$('.dropdown-toggle').on 'click', (e) ->
+		$parent = $(e.target).parents('.dropdown')
+		console.log $parent
 		if $parent.hasClass 'open'
 			$parent.removeClass 'open'
 		else
@@ -10,4 +9,4 @@ $ ->
 
 	$('.category__dropdown-close').on 'click', (e) ->
 		e.preventDefault()
-		$(@).parents('.dropdown').removeClass 'open'
+		$(e.target).parents('.dropdown').removeClass 'open'
